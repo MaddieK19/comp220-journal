@@ -17,4 +17,8 @@ Base repository for COMP220 assignment #2 (Research Journal)
   * render particles
   * eliminate particles 
   
+This paper seemed quite basic but the break down of the particles and particle system should be helpful for breaking down some of my user stories.
+
+##
+  
 
