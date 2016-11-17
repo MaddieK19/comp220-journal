@@ -1,0 +1,113 @@
+% Please do not change the document class
+\documentclass{scrartcl}
+
+% Please do not change these packages
+\usepackage[hidelinks]{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{setspace}
+\doublespace
+
+% You may add additional packages here
+\usepackage{amsmath}
+\usepackage{graphicx} 
+\graphicspath{ {Figures/} }
+
+% Please include a clear, concise, and descriptive title
+\title{Research Journal}
+
+% Please do not change the subtitle
+\subtitle{COMP220}
+
+% Please put your student number in the author field
+\author{1507866}
+
+\begin{document}
+	
+\maketitle
+
+	
+\section{Papers:}
+\subsection{Design and Application of General Data Structure for Particle System \cite{Huang}}
+\begin{itemize}
+	\item The main properties of particle are:
+	\begin{itemize}
+		\item spatial location
+		\item velocity
+		\item survival  time
+		\item shape
+		\item size
+		\item gravity factor 
+	\end{itemize}
+	\item Properties change over time 
+	\item Particle system should:
+		\begin{itemize}
+			\item initialise particles
+			\item emit particles
+			\item render particles
+			\item eliminate particles 
+		\end{itemize}
+\end{itemize}
+
+Paper mostly just gave a model for a particle system, could be helpful for breaking down the particle system into smaller user stories.
+
+
+\subsection{Illumination for computer generated pictures \cite{Phong}}
+\begin{itemize}
+	\item Textures and shadows make 3D graphics look more realistic
+	\item Three light parts of light:
+	\begin{itemize}
+		\item Ambient
+		\item Specular
+		\item Diffuse
+	\end{itemize}
+\end{itemize}
+Related papers: \begin{itemize}
+	\item Blinn \cite{Blinn} - says Phong model not good for reflections
+\end{itemize}
+
+\subsection{ Particle Systems --- a Technique for Modeling a Class of Fuzzy Objects \cite{Reeves}}
+\begin{itemize}
+	\item Other papers refer to this as original paper on Particle Systems
+	\item Particle effects for dynamic/ fluid objects 
+	\item Particles can ``live" and ``die"
+	\item Primitive/simpler shapes/models work better
+\end{itemize}
+Related papers: \begin{itemize}
+	\item Pegoraro \cite{Pegoraro}
+\end{itemize}
+
+\subsection{Study on algorithm for fireworks simulation based on particle system \cite{Lei}}
+\begin{itemize}
+	\item Chose paper as a particle effect for fireworks may relate to a fire particle effect
+	\item Particle systems used to simulate irregular objects 
+	\item Uses lots of maths
+	\item Takes wind/other forces on the particle into account
+	\begin{itemize}
+		\item 
+	\end{itemize}
+\end{itemize}
+
+\subsection{ The status quo and realization of Waterfall simulation based on particle system \cite{Shi}}
+\begin{itemize}
+	\item Focuses on water simulation instead of fire
+	\item Using physics to make particles more realistic 
+	\item Use collision detection to make more fluid / respond to environment 	
+\end{itemize}
+
+\subsection{Physically-Based Realistic Fire Rendering \cite{Pegoraro}}
+\begin{itemize}
+	\item 
+\end{itemize}
+Related papers: \begin{itemize}
+	\item Will add papers from this papers previous research section
+\end{itemize}
+
+%\subsection{ \cite{}}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+	
+\bibliographystyle{ieeetr}
+\bibliography{comp220_2}
+	
+\end{document}
