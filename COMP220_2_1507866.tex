@@ -27,12 +27,12 @@
 \abstract{This essay will look at a lighting in computer graphics and using particle effect systems to simulate dynamic objects such as fire. }
 	
 \section{Introduction}
-The intention of this paper is to look at computer graphic lighting and particle effects. For lighting it will look at Phong's model.
-For particle effects it will look at particle effect systems in general, being used for fire works and being used to simulate fire.  
+The intention of this paper is to look at computer graphic lighting and particle effects. For lighting it will look at Phong's model for computer generated images from 1975 \cite{Phong}.
+For particle effects it will look at Reeves technique for simulating irregular and dynamic objects \cite{Reeves}. It will also look at the use of particle effects systems in simulating realistic fire, fire-works and water.  
 
 \section{Lighting}
-Phong originally proposed a lighting model.  Previous computer graphics only used diffuse lighting, Phong expanded this into three components and introduced highlights \cite{Kajiya}. Phong's model split computer graphic lighting into three components which are specular, ambient and diffuse. Lighting models previous to this could take a long time to calculate or did not give realistic results \cite{Phong}.
-Blinn refers to Phong's model as a more realistic model and says it improves the appearance of curved objects \cite{Blinn}. However Blinn and Newell suggested the Phong model was not suitable for reflections \cite{BlinnNewell}...
+Phong originally proposed a lighting model for more realistic computer graphic lighting \cite{Phong}.  Previously computer graphics only used diffuse lighting, Phong expanded this into separate components and introduced highlights \cite{Kajiya, BlinnNewell, Phong}. Phong's model splits computer graphic lighting into three components which are specular, ambient and diffuse. Lighting models previous to this could take a long time to calculate or did not give realistic results \cite{Phong}. 
+Blinn refers to Phong's model as a more realistic model and says it improves the appearance of curved objects \cite{Blinn}. However Blinn and Newell suggested the Phong model was not suitable for reflections on planar polygons \cite{BlinnNewell}. Another issue with Phong's model is that it is designed to be used on distant light sources and is not suited to light sources within the scene \cite{Whitted}. Extension to Phong's model may be able to remove those issues \cite{BlinnNewell, Whitted}.
 
 	
 \section{Particle Effects}
@@ -46,13 +46,19 @@ The properties a particle should have are spatial location, velocity, survival  
 Fireworks are a irregular and dynamic objects so are suited to being simulated using a particle system \cite{Lei, Reeves}. There are many other papers that look at using particle effects for fireworks \cite{Lei, Dong, Zhang}. Lei and Wang looked using a particle system to simulate fireworks \cite{Lei}. Like Reeves they mention particles need to have a lifetime and can be used to create dynamic objects. Their method also takes other forces into account such as simulated temperature, wind speed and physics and what effect this would have on the particle\cite{Lei}. Lei and Wang's method does not follow Huang \textit{et al}'s model as all particles are created at the same time. However, the particles are similar to Huang \textit{et al}'s model, they have attributes such as position, velocity and lifespan.
 
 \bigskip
-Another use for particle effects is simulating fire \cite{Pegoraro}. There are many ways to simulate fire with computer graphics \cite{BridaultLouchez, Beaudoin, Lamorlette}. Fire is complex to simulate therefore most methods simplify fire often to just the yellow flame component \cite{Pegoraro}.  Pegoraro and Parker use particle effects to simulate flames but researched fire at a molecular level first to make there simulation more realistic. 
+Another use for particle effects is simulating fire \cite{Pegoraro}. There are many ways to simulate fire with computer graphics \cite{BridaultLouchez, Beaudoin, Lamorlette}. Fire is complex to simulate therefore most methods simplify fire often to just the yellow flame component \cite{Pegoraro}.  Pegoraro and Parker use particle effects to simulate flames but researched fire at a molecular level first to make their simulation more realistic. Their physically based rendering model takes biological and chemical factors into account. Their simulation also warps the simulation background to simulate refraction.  Despite producing realistic results Pegoraro and Parker's method takes 40 to 80 seconds to produce a flame, which would not be viable in a video game \cite{Pegoraro}. 
 
 \subsection{Particle Effects for Water Simulation}
-Water is another dynamic object that can be simulated using particle effects. Shi and Wang used particle effects to simulate a waterfall \cite{Shi}. Like Lei, Shi and Wang used physics to make the particle movement more natural. Collision detection was also used to make the water move more fluidly.
+Water is another dynamic object that can be simulated using particle effects. Three components needed for realistic water simulation is correct atmospheric conditions, wave generation and light transport through the water body \cite{Premoze}. Like Pegoraro, Wan \textit{et al} look at photo-realistic simulation and uses simulated refraction to improve appearance and reflections \cite{Pegoraro, Wan}. Shi and Wang mention Premoze and Ashikhmin's complex illumination model for water but not whether they use it \cite{Premoze}.
+
+Shi and Wang used particle effects to simulate a waterfall \cite{Shi}. Like Lei, Shi and Wang used physics to make the particle movement more natural \cite{Lei, Shi}. Collision detection was also used to make the water move more fluidly.  Shi and Wang's definition for a water particle is ``a particle with initial position, initial velocity, life cycle, quality, size, shape, falling height"  \cite[p.1]{Shi}. Many of those properties match the properties suggest by Huang \textit{et al}.
+
+Using a clustering tree can reduce computing power as it reduces the amount of particles that need to perform a collision detection \cite{Shi}. If one particle collides others generated afterwards do not need to perform the check \cite{Shi}.
 
 
 \section{Conclusion}
+In conclusion Phong's model for lighting is still widely used however it requires extensions to make it more realistic for reflections. 
+Reeves proposed the original technique for particle effect systems. There are now many iterations of this techniques. Many of these other versions take other factors such as gravity and collisions into account to make them more realistic. 
 
 	
 \bibliographystyle{ieeetr}
